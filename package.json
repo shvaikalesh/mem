@@ -1,0 +1,18 @@
+{
+  "name": "mem",
+  "version": "1.0.0",
+  "description": "Tiny, modern memoization library for unary functions",
+  "keywords": [
+    "function",
+    "call",
+    "memoize",
+    "memoization",
+    "cache",
+    "caching",
+    "weakmap"
+  ],
+  "bugs": "https://github.com/shvaikalesh/mem/issues",
+  "license": "MIT",
+  "author": "Aleksey Shvayka <shvaikalesh@gmail.com>",
+  "repository": "shvaikalesh/mem"
+}
