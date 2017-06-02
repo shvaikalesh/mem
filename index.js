@@ -1,7 +1,9 @@
 export default fn => {
-  let cache = new WeakMap
+  let weak = new WeakMap
+  let strong = new Map
 
   return key => {
+    let cache = key === Object(key) ? weak : strong
     if (cache.has(key)) return cache.get(key)
 
     let result = fn(key)
