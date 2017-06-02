@@ -1,4 +1,6 @@
 export default fn => {
+  if (fn.length != 1) return fn
+
   let weak = new WeakMap
   let strong = new Map
 
