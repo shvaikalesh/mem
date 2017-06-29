@@ -16,3 +16,17 @@ Use `default` export:
 
 * Objects: identity-based, weakly-referenced
 * Primitives: [`SameValueZero`](https://tc39.github.io/ecma262/#sec-samevaluezero) algorithm
+
+## Example
+
+Utilizing template caching (see [`[[TemplateMap]]`](https://tc39.github.io/ecma262/#sec-gettemplateobject)) to speed up tagged literals:
+
+```js
+const dropSpaces = mem(raw => {
+  return raw.map(str => str.replace(/\s+/g, ""))
+})
+
+export default ({raw}, ...vals) => {
+  return String.raw({raw: dropSpaces(raw)}, ...vals)
+}
+```
